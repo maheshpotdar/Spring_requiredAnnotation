@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="c1" class="com.mahesh.model.Car">
+		<property name="carname" value="Honda Ameza" />
+	</bean>
+
+	<bean id="e1" class="com.mahesh.model.Employee">
+		<property name="empname" value="Mahesh Dilip Potdar" />
+		<property name="empaddress" value="Pune,India" />
+		<property name="empcountry" value="India" />
+		<property name="state" value="Maharashtra,India" />
+		<property name="city" value="Pune,India" />
+		<property name="car" ref="c1" />
+	</bean>
+
+	<!-- required annotation activated. -->
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+</beans>			
+			
