@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+
+	<bean id="c1" class="com.mahesh.model.Car">
+		<property name="modelyear" value="2019" />
+		<property name="carName" value="Renault Duster"></property>
+		<property name="avg" value="30"></property>
+		<property name="carprice" value="2900000"></property>
+	</bean>
+
+	<bean id="t1" class="com.mahesh.model.Employee">
+		<property name="empName" value="Mahesh Dilip Patel" />
+		<property name="car">
+			<ref bean="c1" />
+		</property>
+	</bean>
+
+	<!-- To Activate Required Annotation -->
+
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+</beans>
